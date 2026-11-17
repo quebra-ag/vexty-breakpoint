@@ -24,6 +24,16 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
+<style>
+/* Entregas: 3 cards + 2 cards em destaque (pode ser movido para css/styles.css) */
+.deliv{grid-template-columns:repeat(6,1fr)}
+.deliv li{grid-column:span 2}
+.deliv li.hl{grid-column:span 3;background:var(--lime);border-color:var(--lime);color:var(--on-lime)}
+.deliv li.hl svg{color:var(--on-lime)}
+.deliv li.hl b{display:block;font-family:var(--display);font-weight:700;font-size:clamp(22px,2.2vw,28px);line-height:1.1;margin-bottom:8px}
+@media (max-width:960px){.deliv{grid-template-columns:1fr 1fr}.deliv li,.deliv li.hl{grid-column:auto}.deliv li:nth-child(3){grid-column:span 2}}
+@media (max-width:560px){.deliv{grid-template-columns:1fr}.deliv li:nth-child(3){grid-column:auto}}
+</style>
 </head>
 <body>
 
@@ -564,9 +574,8 @@
       <li><svg width="26" height="26" viewBox="0 0 22 22" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="10" stroke="currentColor" stroke-width="1.8"/><path d="m6.5 11.2 3 3 6-6.4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Diagnóstico de mercado, concorrência e percepção, com régua de evidência</li>
       <li><svg width="26" height="26" viewBox="0 0 22 22" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="10" stroke="currentColor" stroke-width="1.8"/><path d="m6.5 11.2 3 3 6-6.4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Arquitetura de marca e nome, com alternativas e racional</li>
       <li><svg width="26" height="26" viewBox="0 0 22 22" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="10" stroke="currentColor" stroke-width="1.8"/><path d="m6.5 11.2 3 3 6-6.4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Plataforma de posicionamento: território, atributo central e desdobramento por público</li>
-      <li><svg width="26" height="26" viewBox="0 0 22 22" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="10" stroke="currentColor" stroke-width="1.8"/><path d="m6.5 11.2 3 3 6-6.4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Identidade visual e verbal, com diretrizes de uso.</li>
-      <li><svg width="26" height="26" viewBox="0 0 22 22" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="10" stroke="currentColor" stroke-width="1.8"/><path d="m6.5 11.2 3 3 6-6.4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Matriz de Comunicação por público, com Mapa de relacionamento; guia de perguntas e respostas; o que e como dizer; o que não dizer.</li>
-      <li><svg width="26" height="26" viewBox="0 0 22 22" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="10" stroke="currentColor" stroke-width="1.8"/><path d="m6.5 11.2 3 3 6-6.4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Guia de marca aplicável, com enxoval digital, mock’ups e simulação para aplicação em redes sociais.</li>
+      <li class="hl"><svg width="26" height="26" viewBox="0 0 22 22" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="10" stroke="currentColor" stroke-width="1.8"/><path d="m6.5 11.2 3 3 6-6.4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>Brandbook</b>Identidade visual e verbal, matriz de comunicação, mapa de relacionamento e guia de perguntas e respostas. O que e como dizer; o que não dizer.</div></li>
+      <li class="hl"><svg width="26" height="26" viewBox="0 0 22 22" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="10" stroke="currentColor" stroke-width="1.8"/><path d="m6.5 11.2 3 3 6-6.4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>Guia de marca</b>Aplicações da marca, enxoval digital, mock’ups e simulação de redes sociais.</div></li>
     </ul>
     <div class="sched" data-rv>
       <b class="num">90 a 150 dias</b>
